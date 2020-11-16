@@ -473,7 +473,7 @@ public class DependencyState extends StateAdjuster implements DependencySides, D
             }
         }else {
             result =  super.setStateValue(value);
-            if(!result){
+            if(result){
                 removeAllObservers(sides.getStartSide());
                 removeAllObservers(sides.getEndSide());
             }
