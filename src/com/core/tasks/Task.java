@@ -38,7 +38,7 @@ public class Task implements StateObject {
 
 
     /**
-     * Creates a "Completed if Completed" (CtoC) relationship with the given State.
+     * Creates a "Completed if Completed" (CtoC) relationship with the given State Object.
      * @param stateObject
      * @return
      * @throws StateException
