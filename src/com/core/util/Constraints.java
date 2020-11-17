@@ -4,7 +4,6 @@ import com.core.model.TimeRange;
 import com.core.model.api.MutableState;
 import com.core.model.api.State;
 import com.core.model.impl.adjustable.dependent.ReversibleState;
-import com.core.model.impl.adjustable.dependent.constraint.ConstraintException;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 

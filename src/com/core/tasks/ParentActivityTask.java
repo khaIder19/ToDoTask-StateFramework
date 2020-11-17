@@ -52,21 +52,21 @@ public class ParentActivityTask extends ActivityTask{
 
     @Override
     public boolean progressIfCompleted(ActivityTask activityTask) throws NotSupportedDependency {
-        throw new NotSupportedDependency("Parent Activity Task can depend only on sub activitys");
+        throw new NotSupportedDependency("Parent Activity Task can depend only on sub activities");
     }
 
 
 
     @Override
     public boolean completedIfCompleted(ActivityTask activityTask) throws NotSupportedDependency {
-        throw new NotSupportedDependency("Parent Activity Task can depend only on sub activitys");
+        throw new NotSupportedDependency("Parent Activity Task can depend only on sub activities");
     }
 
 
 
     @Override
     public boolean progressIfProgress(ActivityTask activityTask) throws NotSupportedDependency {
-        throw new NotSupportedDependency("Parent Activity Task can depend only on sub activitys");
+        throw new NotSupportedDependency("Parent Activity Task can depend only on sub activities");
     }
 
 }

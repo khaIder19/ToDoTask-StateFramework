@@ -102,7 +102,7 @@ public class DependencyPoint implements Serializable {
         try {
             result = getConstraint().resolve(getDependecySet());
         } catch (ConstraintException e) {
-            e.printStackTrace();
+
         }
         return result;
     }
@@ -148,7 +148,7 @@ public class DependencyPoint implements Serializable {
             try {
                 validationRanges = constraint.resolveConstraintRange(getDependecySet());
             } catch (ConstraintException e) {
-                e.printStackTrace();
+
             }
             return anyMatch(n,validationRanges);
         }
@@ -179,7 +179,7 @@ public class DependencyPoint implements Serializable {
             try {
                 return getConstraint().resolveConstraintRange(getDependecySet());
             } catch (ConstraintException e) {
-                e.printStackTrace();
+
             }
         }
         return new TimeRange[]{new TimeRange(Long.MIN_VALUE,Long.MAX_VALUE)};

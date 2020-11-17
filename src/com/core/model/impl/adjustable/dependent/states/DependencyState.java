@@ -177,9 +177,7 @@ public class DependencyState extends StateAdjuster implements DependencySides, D
                     ((ObservableState)state).addStateObserver(stateSide.getSideObserver(this));
                 }
 
-                if(state instanceof DestructibleDependency){
-                    ((DestructibleDependency)state).addDestroyObserver(getDestroyObserver());
-                }
+                addDestroyObserverToDependency(state);
 
                 setResolvableNotification();
             }
@@ -196,6 +194,7 @@ public class DependencyState extends StateAdjuster implements DependencySides, D
             ((DestructibleDependency)dependency).addDestroyObserver(getDestroyObserver());
         }
     }
+
 
     /**
      * Removes all observers subscribed to the given dependency point's state(s).

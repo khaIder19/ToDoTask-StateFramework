@@ -1,10 +1,8 @@
 package com.core.tasks;
 
 import com.core.model.impl.adjustable.dependent.exc.StateException;
-
 import com.core.model.api.State;
 import com.core.model.api.StateObject;
-
 import com.core.model.impl.adjustable.dependent.exc.NotSupportedDependency;
 import com.core.model.impl.adjustable.dependent.states.DependencyState;
 import com.core.model.impl.adjustable.dependent.states.impl.NoEndState;
@@ -38,7 +36,7 @@ public class Task implements StateObject {
 
 
     /**
-     * Creates a "Completed if Completed" (CtoC) relationship with the given State Object.
+     * Creates a "Completed if Completed" (CtoC) relationship with the given StateObject.
      * @param stateObject
      * @return
      * @throws StateException

@@ -14,7 +14,6 @@ import com.core.model.impl.adjustable.adjuster.impl.DynamicAdjuster;
 import com.core.model.impl.adjustable.adjuster.impl.StaticAdjuster;
 import com.core.util.States;
 
-
 public class ActivityTask implements StateObject {
 
     protected DependencyState progressState;
@@ -109,7 +108,7 @@ public class ActivityTask implements StateObject {
 
 
     /**
-     * Creates a "Start to Finish" (StoF) relationship with the given State.
+     * Creates a "Start to Finish" (StoF) relationship with the given ActivityTask.
      * @param activityTask
      * @return
      */
@@ -122,7 +121,7 @@ public class ActivityTask implements StateObject {
     }
 
     /**
-     *Creates a "Start to Start" (SS) relationship with the given State.
+     *Creates a "Start to Start" (SS) relationship with the given ActivityTask.
      * @param activityTask
      * @return
      */
@@ -136,7 +135,7 @@ public class ActivityTask implements StateObject {
 
 
     /**
-     *Creates a "Finish to Finish" (FF) relationship with the given State.
+     *Creates a "Finish to Finish" (FF) relationship with the given ActivityTask.
      * @param
      * @return
      */
@@ -152,7 +151,9 @@ public class ActivityTask implements StateObject {
     @Override
     public String toString() {
         return "ActivityTask{" +
-                " progressState=" + progressState.getRange().toString() +
+                " progress=" + isInProgress() +
+                " completed="+ isCompleted() +
+                "range=" + progressState.getRange().toString()+
                 '}';
     }
 
@@ -184,7 +185,7 @@ public class ActivityTask implements StateObject {
     }
 
     public boolean isCompleted(){
-        return progressState.isExtinct();
+        return (!progressState.getStateValue() && progressState.isExtinct());
     }
 
 
